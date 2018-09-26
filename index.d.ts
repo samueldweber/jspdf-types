@@ -1,9 +1,10 @@
-// Type definitions for jsPDF v1.1.135
+// Type definitions for jsPDF v1.4.1
 // Project: https://github.com/MrRio/jsPDF
 // Definitions by: Amber Schühmacher <https://github.com/amberjs>
+// Definitions by: Samuel Dittberner Weber <https://github.com/samueldweber>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'jspdf' {
+declare module 'jspdf-types' {
     class jsPDF {
         constructor(orientation?:any,
                     unit?:string,
@@ -31,8 +32,8 @@ declare module 'jspdf' {
             'events':any;
             'scaleFactor':number;
             'pageSize': {
-                width:number;
-                height:number;
+                getWidth():number;
+                getHeight():number;
             };
             'output'(type:any, options:any):any;
             'getNumberOfPages'():number;
